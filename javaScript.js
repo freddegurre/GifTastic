@@ -4,7 +4,7 @@
 
 
 //------Array for al topics
-var topics = ["Happy Birthday", "Happy New Year", "formula 1"];
+var topics = ["1900", "1910", "1920", "1930", "1940", "1950", "1960", "1970", "1980", "1990", "2000", "2010",];
 
 //Function to create buttons inside html for each string in topics array
 function renderButtons (){
@@ -13,7 +13,7 @@ function renderButtons (){
     //For loop to run through full lenght of array
     for (var i = 0; i < topics.length; i++) {
         //create empty button var
-        var button = $("<button>");
+        var button = $("<button class='btn'>");
         //give it the class of topic
         button.addClass("topic")
         //give it the value of relatid topic by attributing the title index of button
@@ -52,11 +52,11 @@ function getTopic() {
         console.log(topicQuery)
         console.log(response)
         for (var i = 0; i < response.data.length; i++) {
-            console.log(response.data[i].title)
-            var gifHolder = $("<div>")
-            gifHolder.addClass("gif-placeholder")
-            gifHolder.append("<p>" + response.data[i].rating + "</p>"
-            +"<img src= '" + response.data[i].images.fixed_height.url + "'</img>")
+            console.log(response.data[i].title);
+            var gifHolder = $("<div class='col-md-4'>");
+            var rating = $("<p class='text-warning'>").text("Rating: " + response.data[i].rating);
+            var gifImg = $("<img class='gifimg'>").attr("src", response.data[i].images.fixed_width.url);
+            gifHolder.append(rating, gifImg);
             $("#gif-div").append(gifHolder);
 
         }

@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GifTastic</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <!-- Link to stylesheet -->
     <link rel="stylesheet" href="style.css">
-     <!-- Link to JQuery -->
+    <!-- Link to JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
+
 <body>
 
     <div class="container">
-        <div class="row" id="topics-div">
-            This is where buttons should go
+            <div class="jumbotron">
+                    <h1>Gif By Century</h1>
+                    <p>110 years of Gif!</p>
+                  </div>
+        <div class="row">
+            <div class="col-md-9" id="topics-div">
+
+            </div>
+            <div class="col-md-3" id="create-topic-div">
+                <form id="topic-form">
+
+
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+                        <input type="text" class="form-control" placeholder="Topic" id="topic-input">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-hand-left"></span></div>
+                    </div>
+                    <!-- Button triggers new movie to be added -->
+
+                    <button id="add-topic" type="submit" class="btn" value="Add topic">Search</button>
+            </div>
+
         </div>
         <div class="row">
             <div class="col-md-9" id="gif-div">
-                this is where giffs should be diplayed
+             
             </div>
-            <div class="col-md-3" id="create-topic-div">
-                this is where the search function should be.
-                <form id="topic-form">
-                        <label for="topic-input">Add topic</label>
-                        <input type="text" id="topic-input"><br>
-                  
-                        <!-- Button triggers new movie to be added -->
-                        <input id="add-topic" type="submit" value="Add topic">
-                      </form>
+            <div class="col-md-3" >
+                
+                </form>
             </div>
         </div>
 
@@ -40,7 +58,8 @@
 
     </div>
 
-     <!-- Link to javascript -->
-     <script src="javaScript.js"></script>
+    <!-- Link to javascript -->
+    <script src="javaScript.js"></script>
 </body>
+
 </html>

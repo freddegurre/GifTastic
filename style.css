@@ -1,8 +1,33 @@
-div {
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 4px;
-   
+.form-control:focus {
 
+}
+body{
+    background-color: #A3BAC3;
+    color: #007090;
+    font-family: 'Dosis', sans-serif;
+}
+.jumbotron {
+    background-color: #EAEBED;
+    
+} 
+
+button {
+    background-color: #007090;
+    color: #EAEBED;
+}
+
+.btn {
+    margin: 4px;
+}
+
+.row {
+   margin-left: -15px;
+   margin-right: -15px;
+}
+.form-control {
+    background-color: #EAEBED;
+}
+#add-topic{
+    margin: 0;
+    margin-top: 10px;
 }
