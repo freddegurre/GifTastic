@@ -55,7 +55,7 @@ function getTopic() {
             console.log(response.data[i].title);
             var gifHolder = $("<div class='col-md-4'>");
             var rating = $("<p class='text-warning'>").text("Rating: " + response.data[i].rating);
-            var gifImg = $("<img class='gifimg'>").attr("src", response.data[i].images.fixed_width.url);
+            var gifImg = $("<img class='gifimg'>").attr("src", response.data[i].images.fixed_width_still.url);
             gifHolder.append(rating, gifImg);
             $("#gif-div").append(gifHolder);
 
@@ -69,3 +69,16 @@ function getTopic() {
 $(document).on("click", ".topic", getTopic);
 
 
+//toggle between playing and pausing when gif is clicked
+$(document).on("click", ".gifimg", function(){
+        
+    var src = $(this).attr("src");
+    //if gif is playing, stop it on click
+    if($(this).hasClass("playing")) {
+        $(this).attr('src', src.replace(/\.gif/i, "_s.gif"));
+        $(this).removeClass("playing");
+    } else {
+        $(this).addClass("playing");
+        $(this).attr('src', src.replace(/\_s.gif/i, ".gif"));
+    }
+})
