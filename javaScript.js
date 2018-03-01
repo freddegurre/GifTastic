@@ -43,7 +43,7 @@ $("#add-topic").on("click", function(event){
 function getTopic() {
     $("#gif-div").empty();
     var topic = $(this).attr("data-topic");
-    var topicQuery = "http://api.giphy.com/v1/gifs/search?api_key=VGcL2A00UMsYG4SCg45dBgVfB9Osg0NG&q=" + topic;
+    var topicQuery = "https://api.giphy.com/v1/gifs/search?api_key=VGcL2A00UMsYG4SCg45dBgVfB9Osg0NG&q=" + topic;
 
     $.ajax({
         method: "get",
